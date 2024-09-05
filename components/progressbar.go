@@ -5,7 +5,7 @@ import (
 	"math"
 	"strings"
 
-	living_terminal "github.com/living-terminal"
+	living_terminal "github.com/jwpkg/living-terminal"
 	"golang.org/x/term"
 )
 

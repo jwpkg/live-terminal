@@ -3,6 +3,8 @@ module github.com/jwpkg/living-terminal
 
 go 1.23.0
 
+replace github.com/jwpkg/living-terminal/components => ./components
+
 require golang.org/x/term v0.23.0
 
 require (
