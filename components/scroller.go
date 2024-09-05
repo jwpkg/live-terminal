@@ -3,7 +3,7 @@ package components
 import (
 	"time"
 
-	living_terminal "github.com/living-terminal"
+	living_terminal "github.com/jwpkg/living-terminal"
 	"golang.org/x/term"
 )
 

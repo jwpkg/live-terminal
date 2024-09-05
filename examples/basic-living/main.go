@@ -5,8 +5,8 @@ import (
 	"time"
 
 	spinner "github.com/gabe565/go-spinners"
-	living_terminal "github.com/living-terminal"
-	components "github.com/living-terminal/components"
+	living_terminal "github.com/jwpkg/living-terminal"
+	components "github.com/jwpkg/living-terminal/components"
 )
 
 func main() {

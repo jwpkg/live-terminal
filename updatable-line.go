@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/living-terminal/internal"
+	"github.com/jwpkg/living-terminal/internal"
 	"golang.org/x/term"
 )
 

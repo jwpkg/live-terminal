@@ -1,4 +1,4 @@
-module github.com/living-terminal
+module github.com/jwpkg/living-terminal
 
 
 go 1.23.0

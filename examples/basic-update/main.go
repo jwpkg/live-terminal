@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	living_terminal "github.com/living-terminal"
+	living_terminal "github.com/jwpkg/living-terminal"
 )
 
 func main() {

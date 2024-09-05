@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	living_terminal "github.com/living-terminal"
+	living_terminal "github.com/jwpkg/living-terminal"
 )
 
 type SinusWave struct {
