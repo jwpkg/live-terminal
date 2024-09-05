@@ -20,7 +20,7 @@ func NewSinusWave() *SinusWave {
 
 	for y := 1.0; y >= -1.0; y -= 0.2 {
 		currentLine := ""
-		for x := 0.0; x < math.Pi*2-0.1; x += 0.2 {
+		for x := 0.0; x < math.Pi*2-0.1; x += 0.1 {
 			sin := math.Sin(x)
 			if (y+0.1) > sin && (y-0.1) <= sin {
 				currentLine += "*"
@@ -56,7 +56,7 @@ func NewSinusWave() *SinusWave {
 }
 
 func (sinusWave *SinusWave) run() {
-	ticker := time.NewTicker(time.Millisecond * 50)
+	ticker := time.NewTicker(time.Millisecond * 30)
 
 	for {
 		select {

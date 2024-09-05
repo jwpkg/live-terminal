@@ -19,6 +19,9 @@ func (sinus *SinusWaveComponent) Render() string {
 	runes := []rune(sinus.Text)
 
 	size, _, _ := term.GetSize(int(living_terminal.OriginalStdout.Fd()))
+	if size > sinus.CurrentFrame {
+		size = sinus.CurrentFrame
+	}
 
 	result := make([]rune, 0)
 	for pos := range size {
