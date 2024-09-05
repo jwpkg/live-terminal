@@ -1,9 +1,8 @@
-package components
+package living_terminal
 
 import (
 	"time"
 
-	living_terminal "github.com/jwpkg/living-terminal"
 	"golang.org/x/term"
 )
 
@@ -52,7 +51,7 @@ func (scroller *LivingScroller) Render() string {
 	runes := []rune(scroller.Text)
 	size := scroller.Size
 	if size == 0 {
-		size, _, _ = term.GetSize(int(living_terminal.OriginalStdout.Fd()))
+		size, _, _ = term.GetSize(int(OriginalStdout.Fd()))
 	}
 
 	result := make([]rune, 0)

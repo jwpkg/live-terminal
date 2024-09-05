@@ -6,27 +6,26 @@ import (
 
 	spinner "github.com/gabe565/go-spinners"
 	living_terminal "github.com/jwpkg/living-terminal"
-	components "github.com/jwpkg/living-terminal/components"
 )
 
 func main() {
 	fmt.Println("Start")
 
-	progressBar := components.NewProgressBar()
+	progressBar := living_terminal.NewProgressBar()
 	line1 := living_terminal.NewLivingLine(
 		progressBar,
 	)
 	defer line1.Finish()
 
 	line2 := living_terminal.NewLivingLine(
-		components.NewLivingSpinner(spinner.Dots),
-		components.NewLivingText(" Processing"),
-		components.NewLivingSpinner(spinner.SimpleDots),
+		living_terminal.NewLivingSpinner(spinner.Dots),
+		living_terminal.NewLivingText(" Processing"),
+		living_terminal.NewLivingSpinner(spinner.SimpleDots),
 	)
 	defer line2.Finish()
 
 	line3 := living_terminal.NewLivingLine(
-		&components.LivingScroller{
+		&living_terminal.LivingScroller{
 			Text:     "Scrolling text! - ",
 			Interval: time.Millisecond * 50,
 			Size:     50,
@@ -41,5 +40,5 @@ func main() {
 		time.Sleep(time.Millisecond * 50)
 	}
 
-	line2.Update(components.NewLivingText("Processing Done!"))
+	line2.Update(living_terminal.NewLivingText("Processing Done!"))
 }

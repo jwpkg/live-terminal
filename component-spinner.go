@@ -1,4 +1,4 @@
-package components
+package living_terminal
 
 import (
 	"time"

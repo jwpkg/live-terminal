@@ -1,11 +1,10 @@
-package components
+package living_terminal
 
 import (
 	"fmt"
 	"math"
 	"strings"
 
-	living_terminal "github.com/jwpkg/living-terminal"
 	"golang.org/x/term"
 )
 
@@ -51,7 +50,7 @@ func (progressBar *ProgressBar) Finish() {
 func (progressBar *ProgressBar) Render() string {
 	size := progressBar.Size
 	if size == 0 {
-		size, _, _ = term.GetSize(int(living_terminal.OriginalStdout.Fd()))
+		size, _, _ = term.GetSize(int(OriginalStdout.Fd()))
 	}
 	progressRange := float64(progressBar.Max - progressBar.Min)
 	progress := float64(progressBar.Current) / progressRange
